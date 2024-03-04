@@ -143,6 +143,7 @@ body{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    background-repeat: no-repeat;
 }
 
 #hero > *{
@@ -487,6 +488,7 @@ footer a:hover{
     width: 100%;
     height: 40vh;
     background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -1136,6 +1138,7 @@ footer a:hover{
         /* background-image: url('assets//JBL\ Wave\ 300/3.webp'); */
         /* padding: 0 20px; */
         background-position: top 10% left 55%;
+        padding: 0 60px;
     }
 
     #hero h4{
