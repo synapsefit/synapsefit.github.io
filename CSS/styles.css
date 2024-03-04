@@ -956,9 +956,6 @@ footer a:hover{
     }
 
     #hero {
-        background-image: url('assets/homepage-banners/women-on-headphones-5.jpg');
-        height: 70vh;
-        padding: 0 80px;
         background-position: top 10% right 47%;
     }
     
@@ -1136,8 +1133,8 @@ footer a:hover{
 
     #hero {
         /* background-image: url('assets/JBL\ 230NC/converted/b-1.jpg'); */
-        background-image: url('assets//JBL\ Wave\ 300/3.webp');
-        padding: 0 20px;
+        /* background-image: url('assets//JBL\ Wave\ 300/3.webp'); */
+        /* padding: 0 20px; */
         background-position: top 10% left 55%;
     }
 
