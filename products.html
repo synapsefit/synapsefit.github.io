@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="icon" type="image/x-icon" href="assets/LOGO/Vectorized/favicon.png">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <!-- header -->
+    <section id="header">
+        <a href="#"><img onclick="window.location.href='index.html'" src="assets/Smartband/huawei-band-8/logo.png" class="logo" width="33%" height="33%" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fa-solid fa-grip-lines"></i>
+        </div>
+    </section>
+
+    <!-- hero -->
+    <section id="page-header">
+        <h2>#SeamlessInsights</h2>
+        <p>Unleash Your Inner Athlete</p>
+    </section>
+
+    <!-- product cards -->
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            <div class="pro">
+                <img onclick="window.location.href='pro-huawei-band-8.html'" src="assets/Smartband/huawei-band-8/black-3.png" alt="">
+                <div class="des">
+                    <span>Huawei</span>
+                    <h5>Huawei Band 8 CN</h5>
+                    <div class="star">
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                    </div>
+                    <h4>LKR 12,499</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img onclick="window.location.href='pro-huawei-band-7.html'" src="assets/Smartband/huawei-band-7/huawei-band-7-colour-green-3.jpg" alt="">
+                <div class="des">
+                    <span>Huawei</span>
+                    <h5>Huawei Band 7 CN</h5>
+                    <div class="star">
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                    </div>
+                    <h4>LKR 12,999</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img onclick="window.location.href='pro-xiaomi-band-8.html'" src="assets/Smartband/xiaomi-band-8/mi-band-gold-1.png" alt="">
+                <div class="des">
+                    <span>Xiaomi</span>
+                    <h5>Xiaomi Band 8 CN</h5>
+                    <div class="star">
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                    </div>
+                    <h4>LKR 10,999</h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img onclick="window.location.href='pro-xiaomi-band-7.html'" src="assets/Smartband/xiaomi-band-7/mi-band-7-black-2.png" alt="">
+                <div class="des">
+                    <span>Xiaomi</span>
+                    <h5>Xiaomi Band 7 CN</h5>
+                    <div class="star">
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                        <i class="fa solid fa-star"></i>
+                    </div>
+                    <h4>LKR 9,999</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multiple Pages Pagination section -->
+    <!-- <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section> -->
+
+    <!-- newsletter -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign up for newsletter</h4>
+            <p>Get Email Updates about our shop and <span> special offers</span></p>
+        </div>
+        <div class="form">
+            <form name="submit-to-google-sheet">
+            <input name="Email" type="email" placeholder="Your email address" required>
+            <button type="submit" class="normal">Sign up</button>
+        </form>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbynkbXxMT_24sMhhDJ0FHIXO9Flia9YxNvoJAZR-34zCXxcP3YcZBKNKcJ0iR1_QJNytQ/exec'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="assets/Smartband/huawei-band-8/logo.png" width="160px" height="auto" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 5A Kudaedanda Road, Wattala</p>
+            <p><strong>Phone:</strong> +94 77 612 2332</p>
+            <p><strong>Hours:</strong> 10:00 - 19:00, Mon - Sat</p>
+        </div>
+        
+        <div class="col">
+            <h4>About</h4>
+            <a href="#" onclick="window.location.href='about.html'">About us</a>
+            <a href="#" onclick="window.location.href='privacy-policy.html'">Privacy Policy</a>
+            <a href="#" onclick="window.location.href='return-policy.html'">Return Policy</a>
+            <a href="#" onclick="window.location.href='terms-and-conditions.html'">Terms & Conditions</a>
+        </div>
+
+        <div class="col">
+            <h4>Quick Links</h4>
+            <a href="#" onclick="window.location.href='products.html'">Products</a>
+            <a href="#" onclick="window.location.href='faq.html'">FAQ</a>
+            <a href="#" onclick="window.location.href='contact.html'">Contact us</a>
+        </div>
+
+        <div class="col follow">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <a href="https://web.facebook.com/people/AudioBlissShop/100092094922989/" target="_blank"><i class="fab fa-facebook-f"></a></i>
+                <a href="https://www.instagram.com/audiobliss.shop/" target="_blank"><i class="fab fa-instagram"></a></i>
+                <a href="https://www.tiktok.com/@audiobliss.shop" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2023 Synapse Fit</p>
+        </div>
+        
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
