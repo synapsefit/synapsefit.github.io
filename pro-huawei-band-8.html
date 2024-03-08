@@ -6,6 +6,7 @@
     <title>Huawei Band 8 CN</title>
     <link rel="icon" type="image/x-icon" href="assets/LOGO/Vectorized/favicon.png">
     <link rel="stylesheet" href="assets/css/all.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
@@ -105,7 +106,7 @@
                 <option>Sakura Pink</option>
             </select>
             <input type="number" value="1" min="1" max="3" class="input-sec">
-                <button class="normal" onclick="window.location.href='confirm-order-jbl-130nc.html'">Buy now</button>
+                <button class="normal" id="buy-now-button">Buy now</button>
             </a>
             <h4>Product Details</h4>
             <span><strong>Larger, Lighter, Levelled Up</strong><br>
@@ -165,6 +166,94 @@
             
         </div>
     </section>
+
+    <!-- BUY NOW POPUP -->
+    <div class="buy-now-popup">
+        <div class="container">
+            <div class="wrapper">
+                <div class="left">
+                    <div class="image">
+                        <img src="./assets/Smartband/huawei-band-8/black-1.png" alt="">
+                    </div>
+                </div>
+                <div class="right" id="right-before">
+                    <div class="heading">
+                        <h3>Huawei Band 8 CN</h3>
+                    </div>
+                    <div class="sub-heading">
+                        <p>Choose Your Model and Color</p>
+                    </div>
+                    <form name="submit-colors-g-sheets">
+                        Model: <select name="product-name" id="product-name-buy" style="margin-bottom: 10px;">
+                            <option value="huawei-band-8-cn">Huawei Band 8 CN</option>
+                        </select> <br>
+                        Color: <select name="color" id="select-color">
+                            <option disabled>Select Color</option>
+                            <option value="Mid-night Black">Mid-night Black</option>
+                            <option value="Emerald Green">Emerald Green</option>
+                            <option value="Vibrant Orange">Vibrant Orange</option>
+                            <option value="Sakura Pink">Sakura Pink</option>
+                        </select>
+                    <div class="price">
+                        <p>LKR 12,499</p>
+                    </div>
+                    <div class="nxt-button" id="nxt-button">
+                        <button type="submit" >Next <i class="ph ph-caret-right"></i></button>
+                    </div>
+                    </form>
+                </div>
+                <div class="close-icon" id="close-popup">
+                    <i class="ph ph-x"></i>
+                </div>
+                <div class="right-checkout">
+                    <div class="heading">
+                        <h3>Order Summary</h3>
+                    </div>
+                    <div class="price">
+                        <p>Total:</p>
+                        <p>LKR 12,898</p>
+                        <p><i>shipping included</i></p>
+                    </div>
+                    <div class="checkout-button">
+                        <button>Checkout <i class="ph ph-shopping-bag"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="summary-popup">
+        <div class="container">
+            <div class="wrapper">
+                <div class="left">
+                    <div class="image">
+                        <img src="./assets/Smartband/huawei-band-8/black-1.png" alt="">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="heading">
+                        <h2>Order Summary</h2>
+                    </div>
+                    <div class="product-name">
+                        <h4>Huawei Band 8 CN</h4>
+                    </div>
+                    <div class="price">
+                        <p>Grand Total: <span>LKR 12,898</span></p>
+                    </div>
+                    <div class="shipping">
+                        <p>Shipping - LKR 399</p>
+                    </div>
+                    <div class="checkout-button">
+                        <button onclick="window.location.href='https://payhere.lk/pay/oe7dfb6f2'">Checkout <i class="ph ph-shopping-bag"></i></button>
+                    </div>
+                </div>
+                <div class="close-icon" id="close-summary">
+                    <i class="ph ph-x"></i>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
     <section id="product1" class="section-p1">
         <div class="pro-container">
@@ -238,21 +327,53 @@
             <p>Get Email Updates about our shop and <span> special offers</span></p>
         </div>
         <div class="form">
-            <form name="submit-to-google-sheet">
-            <input name="Email" type="email" placeholder="Your email address" required>
-            <button type="submit" class="normal">Sign up</button>
-        </form>
-        <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbynkbXxMT_24sMhhDJ0FHIXO9Flia9YxNvoJAZR-34zCXxcP3YcZBKNKcJ0iR1_QJNytQ/exec'
-            const form = document.forms['submit-to-google-sheet']
-          
-            form.addEventListener('submit', e => {
-              e.preventDefault()
-              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-            })
-          </script>
+            <form name="newsletter-to-google-sheet">
+                <input name="Email" type="email" placeholder="Your email address" required>
+                <button type="" class="normal">Sign up</button>
+            </form>
+            <script>
+                const scriptURL_new = 'https://script.google.com/macros/s/AKfycbxzDaf0RnHXtoXD1QLbN15aCkKSM0FtlmbmIvk6sUyAdUpR1owbQjHnkCY4nyAo1lkp/exec';
+                const form_new = document.forms['newsletter-to-google-sheet'];
+                const emailInput = form_new.elements['Email'];
+
+                form_new.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const email = emailInput.value;
+
+                // Check if email is empty
+                if (email === '') {
+                    emailInput.style.borderColor = 'red';
+                    alert('Please enter your email address.');
+                    return;
+                }
+
+                // Regular expression for basic email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                // Check if email format is valid
+                if (!emailRegex.test(email)) {
+                    emailInput.style.borderColor = 'red';
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+
+                // If valid email, set green shadow and submit the form
+                emailInput.style.boxShadow = '0 0 2px 2px forestgreen';
+                fetch(scriptURL_new, { method: 'POST', body: new FormData(form_new) })
+                    .then(response => {
+                    console.log('Success!', response);
+                    alert('You have signed up for the newsletter!');
+                    // Clear the input field after 1 second (optional)
+                    setTimeout(() => {
+                        emailInput.value = '';
+                        emailInput.style.boxShadow = 'none';  // Remove shadow after clearing
+                    }, 100);
+                    })
+                    .catch(error => console.error('Error!', error.message));
+                });
+
+            </script>
         </div>
     </section>
 
@@ -331,7 +452,8 @@
         }
     </script>
 
-    
+    <script src="JS/submission.js"></script>
+
     <script src="JS/script.js"></script>
 </body>
 </html>
